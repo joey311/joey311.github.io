@@ -1,0 +1,228 @@
+/* Custom styling for Joseph Tomaino's Assignment 1 */
+
+/* reset browser defaults */
+body, ul, div {
+	padding:0;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+	margin-top: 6px;
+	margin-bottom: 8px;
+	color: #000000;
+}
+
+/* - header styling */
+header {
+	padding-top: 26px;
+	padding-bottom: 8px;
+}
+
+.socialIcons ul {
+	float:right;
+}
+
+.socialIcons li {
+	display:inline-block;
+	padding-left: 1em;
+	padding-top: 2.75em;
+}
+
+/* - Main Nav Bar customization */
+.navbar {
+	margin-bottom:12px;
+	
+	span {
+		color:#fff;
+		padding-top: 0px; 
+	}
+	
+	.navbar-toggle {
+		padding: 5px 10px 4px 10px;
+	}
+	
+}
+
+
+
+/* - panel styling for index.html on Right */
+.panel {
+
+	.panel-heading {
+		padding-top:2px;
+		padding-bottom:2px;
+	}
+
+	.panel-body {
+		padding: @panel-body-padding;
+		&:extend(.clearfix all);
+		color: #000000;
+		font-size: 18px;
+	}
+	
+	.panel-body span{	
+		font-size: 26px;
+		color:@brand-primary;
+	}
+}
+
+.btn-secondary {
+  .button-variant(#fff; @brand-secondary; darken(@brand-secondary, 20%));
+}
+
+/* - Car Thumbnails on drivers.html */
+.thumbnail {
+	h3{
+		text-align: center;
+		padding-bottom: 0px;
+	}	
+}
+
+.carousel {
+		margin-bottom: 12px;
+	}
+	
+.story {
+	.pull-right {
+		padding: 10px 0px 10px 10px;
+	}
+}
+
+
+/* - Custom Modal Windows on drivers.html */
+.modal {	
+	.modal-header {
+		text-align: center;
+		background-color: @brand-primary;
+		border-top-left-radius: @border-radius-large;
+		border-top-right-radius: @border-radius-large;		
+	}
+	
+	.modal-title{
+		color:white;
+		padding-left:36px;
+	}
+
+	.modal-body{
+		min-height: 230px;
+		span {
+			color: @brand-primary;
+		}
+		img {
+			padding-top: 8px;
+			padding-bottom: 12px;
+		}
+	}
+}
+
+/* - Nav Tab Custom on races.html */
+.nav-tabs {
+	border-bottom: none;
+	
+	li {
+		margin-bottom: 0px;
+	}
+	
+	li a {
+		padding: 4px 4px;
+		margin-right: 0px;	
+	}
+	
+	li a:hover,
+	li a:focus {
+		background-color: @brand-secondary;
+		border-color: @brand-secondary;
+	}
+	
+	li.active > a, 
+	li.active > a:hover, 
+	li.active > a:focus {
+		background-color: @brand-primary;
+		border-color: @brand-primary;
+	}
+}
+
+/* - Tab Content on races.html */
+.tab-content{
+	border: 1px solid @brand-primary;
+	
+	h3 {
+		margin-top: 0px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 12px;
+		background-color: @brand-primary;
+		color:white;
+	}
+
+	.table td:nth-child(2), .table td:nth-child(3)  {
+		text-align: center;
+	}
+	
+	.winner {
+		color: red;
+		font-weight: bold;
+		font-style: italic;
+	}
+	
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+	/* for heading of all pages */
+	.logo img{
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.socialIcons ul{
+		float:none;
+	}
+
+	h1, .h1, h2, .h2, h3, .h3 {
+		text-align: center
+	}
+	
+	/* nav-tabs on the races.html page */
+	.nav-tabs{
+		text-align:center;
+		
+		li {
+	    	float:none;
+	    	display:inline-block;
+	    }
+    
+	    li.active > a,
+	    li.active > a:hover,
+	    li.active > a:focus {
+		    border-radius: 4px;
+	    }
+	    
+	    li > a,
+	    li > a:hover,
+	    li > a:focus {
+		    border-radius: 4px;
+	    }
+	}	
+	
+	/* tab-content on races.html page*/
+	.tab-content{
+		h3{
+			padding-left: 0px !important;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 480px){
+	/* center aligns image in Modal window on drivers.html */
+	.modal{
+		.modal-body{
+			img{
+				float:none !important;
+				margin:0 auto;
+			}
+		}
+	}
+	
+}
