@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 3 - jCanvas</title>
+    
+    <link href="css/custom.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+    
+  
+</head>
+<body>
+	
+	<header class="clearfix">
+		<ul class="navLinks">
+			<li><a href="jCanvas.html">jCanvas</a></li>
+			<li><a href="players.html">Audio / Video</a></li>
+			<li><a href="mobile.html">jQuery Mobile</a></li>
+		</ul>
+		
+	</header>
+	
+	<div class="container">
+		<div class="pageTitle">
+			<h1>Assignment 3 :: jCanvas</h1>
+		</div>
+		
+		<div class="pageInstructions">
+			<p>Turn on flashlight to find mystery words. Type the mystery clue words in the fields below to reveal a surprise</p>
+			<button id="flashlightBtn">Turn On Flashlight</button>
+		</div>
+		
+		<p>( once light is on, click and drag flashlight circle to see 'clues' )</p>
+		<canvas width="400" height="250" id="canvas1"></canvas>
+		<canvas width="400" height="250" id="canvas2"></canvas>
+		
+		<div class="textContainer">
+			<div class="textInputs">
+				<label for="line1">White Word:</label>
+				<input type="text" id="line1" placeholder="Clue #1">
+			</div>
+			<div class="textInputs">
+				<label for="line2">Orange Word:</label>
+				<input type="text" id="line2" placeholder="Clue #2">
+			</div>
+			<div class="textInputs">
+	        	<label for="line3">Red Word:</label>
+				<input type="text" id="line3" placeholder="Clue #3">
+			</div>
+		</div>
+		
+		<p>Once all clues have been typed, click "Find Mystery Image" button to reveal surprise.</p>
+		
+		<button id="submit">Find Mystery Image</button>
+		
+		<button id="resetBtn">Reset Mystery</button>
+		
+		
+	</div>
+
+
+<!-- javascript -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jcanvas.min.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>

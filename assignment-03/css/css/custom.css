@@ -1,0 +1,12 @@
+/* Custom styling for the Bootstrap website. 
+These styles do not ship with Bootstrap. 
+*/
+
+.gender {
+	padding-top: 22px;
+}
+
+.radio {
+	display:inline-block;
+	padding-right: 12px;
+}
