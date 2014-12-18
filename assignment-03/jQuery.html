@@ -233,14 +233,16 @@
 		
 		
 		$(document).ready(function() {
-			$(window).on('scrollstop', function() {
-				$(body).css("background-color", "red");
-				
-			});
+			$( window ).on( 'orientationchange', function() {
+                        if(window.orientation == 0) {
+                              $('body').css("background-color", "#000");
+                        } else {
+                              $('body').css("background-color", "#AAA");
+                        }
+                  });
 			
 		});
-*/
-		
+
 		
 	</script>
 	
