@@ -1,5 +1,5 @@
 /* Custom */
-body, .ui-btn {
+body, .ui-btn, input, option {
 	font-family: 'Cuprum', sans-serif;
 	font-size: 18px;
 
@@ -28,8 +28,26 @@ img {
 	width: 25%;
 }
 
-@media all and (max-width: 720px) {
+.signUpForm {
+	padding: 0 2%;
+	width: 96%;
+}
 
+@media all and (max-width: 720px) {
+	
+	.ui-grid-a .ui-block-a,
+	.ui-grid-a .ui-block-b  {
+		width: 100%;
+	}
+	
+	.ui-navbar li .ui-btn {
+		font-size: 14px;
+	}
+	
+	.ui-header .ui-title {
+		font-size: 20px;
+		margin: 0 auto;
+	}
 	
 	.ui-grid-c .ui-block-a,
 	.ui-grid-c .ui-block-b,
@@ -38,5 +56,6 @@ img {
 		width: 49%;
 		padding-right: 1%;		
 	}
+	
 }
 

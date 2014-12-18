@@ -25,11 +25,25 @@
 	            <ul>
 	                <li><a href="#home" class="ui-btn-active">Home</a></li>
                     <li><a href="#leagues">Leagues</a></li>
-                    <li><a href="#join">Join the Chapter</a></li>
+                    <li><a href="#members">Members</a></li>
 	            </ul>
 	        </nav>
 		</header>
 		<main data-role="main" class="ui-content">
+			<div class="thumbnails">
+				<a href="#popupRef3" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="img/ref_3.png" alt="Referee Action3" style="width:20%"></a>
+				<a href="#popupRef4" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="img/ref_4.png" alt="Referee Action4" style="width:20%"></a>
+	
+				<div data-role="popup" id="popupRef3" data-overlay-theme="c" data-theme="c" data-corners="false">
+	    			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/ref_3.png" style="max-height:400px;">
+				</div>
+				<div data-role="popup" id="popupRef4" data-overlay-theme="c" data-theme="c" data-corners="false">
+				    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="img/ref_4.png" style="max-height:400px;">
+				</div>
+			</div>
+		
+		
+		
 			<div class="ui-grid-a ui-body ui-body-a">
 	            <div class="ui-block-a">
 		            <p>The North Shore National Ice Hockey Officials Association chapter of officials is made up of 60 dedicated members. These men and women have chosen to make the commitment to uphold what it means to be a NIHOA official. The membership; who’s expertise on the ice can be found in high school, junior and college hockey, are some of the best referees and linesman the North Shore of Massachusetts has to offer.<br>
@@ -54,7 +68,7 @@
 	            <ul>
 	                <li><a href="#home">Home</a></li>
                     <li><a href="#leagues" class="ui-btn-active">Leagues</a></li>
-                    <li><a href="#join">Join the Chapter</a></li>
+                    <li><a href="#members">Members</a></li>
 	            </ul>
 	        </nav>
 		</header>
@@ -115,18 +129,98 @@
 		</footer>
 	</section>
 	
-	<section data-role="page" id="join" data-theme="c">
+	<section data-role="page" id="members" data-theme="c">
 		<header data-role="header"  data-position="fixed">
 			<h1>North Shore Hockey Officials</h1>
 	    	<nav data-role="navbar">
 	            <ul>
 	                <li><a href="#home">Home</a></li>
                     <li><a href="#leagues">Leagues</a></li>
-                    <li><a href="#join" class="ui-btn-active">Join the Chapter</a></li>
+                    <li><a href="#members" class="ui-btn-active">Members</a></li>
 	            </ul>
 	        </nav>
 		</header>
 		<main data-role="main" class="ui-content">
+
+	
+			<div data-role="collapsible" data-collapsed="true">
+			    <h4>Executive Board</h4>
+			    <ul data-role="listview">
+			        <li><a href="#">PRESIDENT - Brett Boliver</a></li>
+			        <li><a href="#">VICE PRESIDENT - Jim Quinlan</a></li>
+			        <li><a href="#">SR. OFFICER - Pat Yeo</a></li>
+			        <li><a href="#">JR. OFFICER - Joey Tomaino</a></li>
+			    </ul>
+			</div>
+			
+			<div class="signUpForm">
+			<header>
+	            <h1>Sign Up to join our Chapter for Next Season</h1>
+			</header>
+			<form>
+	      		<div class="ui-field-contain">
+			    	<label for="name">Your name: </label>
+					<input type="text" id="name">
+	      		</div>
+		  		<div class="ui-field-contain">
+		      		<label for="email">Your email:</label>
+			  		<input type="text" id="email">
+				</div>
+	            <div>
+	                  <label for="years">Years of Officiating:</label>
+	                  <input min="0" max="10" id="years" value="" type="number">
+	            </div>
+		     		<fieldset data-role="controlgroup" data-type="vertical">
+		      			<legend>Highest Level of Officiating Experience:</legend>
+			      		<label for="sedan">
+			      			<input type="radio" name="experience" value="youth" id="youth" > Youth Leagues
+			      		</label>
+			      		<label for="minivan">
+			      			<input type="radio" name="experience" value="pickup" id="pickup"> Pick-Up Hockey
+			      		</label>
+			      		<label for="pickup">
+			      			<input type="radio" name="experience" value="beer" id="beer"> Adult Beer Leagues
+			      		</label>
+			      		<label for="bus">
+			      			<input type="radio" name="experience" value="none" id="none" checked> No Experience
+			      		</label>
+		      		</fieldset>
+		            <fieldset data-role="controlgroup" data-type="horizontal">
+		                  <legend>Highest Level of Playing Experience:</legend>
+		                  <label for="none">
+		                        <input type="radio" name="playing" value="pickup" id="pickup" checked> Pick-Up
+		                  </label>
+		                  <label for="youth">
+		                        <input type="radio" name="playing" value="youth" id="youth"> Youth
+		                  </label>
+		                  <label for="hs">
+		                        <input type="radio" name="playing" value="hs" id="hs"> High School
+		                  </label>
+		                  <label for="college">
+		                        <input type="radio" name="playing" value="college" id="college"> College
+		                  </label>
+		                  <label for="semi">
+		                        <input type="radio" name="playing" value="semi" id="semi"> Semi-Pro
+		                  </label>
+		            </fieldset>
+		      	<div>
+		      		<label for="searchengine" class="select">Favorite College Team:</label>
+		      		<select id="searchengine" data-native-menu="false">
+		      			<option checked>Please select one:</option>
+		      			<option value="google">Vermont</option>
+		      			<option value="yahoo">UMass-Lowell</option>
+		       			<option value="bing">Harvard</option>
+		      			<option value="other">Boston College</option>     			
+		      		</select>
+		      	</div>
+		      
+		      	<button name="submit" type="submit" class="ui-shadow ui-btn ui-btn-inline ui-btn-c ui-corner-all">Submit</button>
+	      	</form>
+			</div>
+			
+			
+			
+			
 		</main>
 		<footer data-role="footer">
 			<p>North Shore Chapter is a part of the National Ice Hockey Officials Association - 2014</p>
@@ -138,6 +232,21 @@
 	<!-- JavaScript -->
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		
+		$(document).ready(function() {
+			$(window).on('scrollstop', function() {
+				$(body).css("background-color", "red");
+				
+			});
+			
+		});
+			
+		jQuery( ".selector" ).on( "scrollstop", function( event ) { ... } )	
+		
+		
+	</script>
+	
 	
 </body>
 </html>
