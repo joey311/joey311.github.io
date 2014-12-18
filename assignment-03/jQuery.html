@@ -236,8 +236,10 @@
 			$( window ).on( 'orientationchange', function() {
                         if(window.orientation == 0) {
                               $('body').css("background-color", "#000");
+                              alert("didn't change");
                         } else {
                               $('body').css("background-color", "#AAA");
+                              alert("change colors");
                         }
                   });
 			
